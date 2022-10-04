@@ -155,35 +155,35 @@ function AboutMe() {
             <div className="titleText">
               <ul>
                 <li
-                  className={click == "b" ? "mainText" : "mainText off"}
+                  className={click === "b" ? "mainText" : "mainText off"}
                   onClick={handleClick}
                   name="b"
                 >
                   B
                 </li>
                 <li
-                  className={click == "c" ? "mainText" : "mainText off"}
+                  className={click === "c" ? "mainText" : "mainText off"}
                   onClick={handleClick}
                   name="c"
                 >
                   C
                 </li>
                 <li
-                  className={click == "m" ? "mainText" : "mainText off"}
+                  className={click === "m" ? "mainText" : "mainText off"}
                   onClick={handleClick}
                   name="m"
                 >
                   M
                 </li>
                 <li
-                  className={click == "r" ? "mainText" : "mainText off"}
+                  className={click === "r" ? "mainText" : "mainText off"}
                   onClick={handleClick}
                   name="r"
                 >
                   R
                 </li>
                 <li
-                  className={click == "p" ? "mainText" : "mainText off"}
+                  className={click === "p" ? "mainText" : "mainText off"}
                   onClick={handleClick}
                   name="p"
                 >
@@ -198,31 +198,31 @@ function AboutMe() {
               </ul>
               <ul className="textBox">
                 <li onClick={handleClick} name="b">
-                  <div className={click == "b" ? "text" : "text off"}>
+                  <div className={click === "b" ? "text" : "text off"}>
                     <p>BASIC</p>
                     <p>BIBLE</p>
                   </div>
                 </li>
                 <li onClick={handleClick} name="c">
-                  <div className={click == "c" ? "text" : "text off"}>
+                  <div className={click === "c" ? "text" : "text off"}>
                     <p>CODE</p>
                     <p>COFFEE</p>
                   </div>
                 </li>
                 <li onClick={handleClick} name="m">
-                  <div className={click == "m" ? "text" : "text off"}>
+                  <div className={click === "m" ? "text" : "text off"}>
                     <p>MOVE</p>
                     <p>MOOD</p>
                   </div>
                 </li>
                 <li onClick={handleClick} name="r">
-                  <div className={click == "r" ? "text" : "text off"}>
+                  <div className={click === "r" ? "text" : "text off"}>
                     <p>READ</p>
                     <p>RECORD</p>
                   </div>
                 </li>
                 <li onClick={handleClick} name="p">
-                  <div className={click == "p" ? "text" : "text off"}>
+                  <div className={click === "p" ? "text" : "text off"}>
                     <p>PLACE</p>
                     <p>PEACE</p>
                   </div>

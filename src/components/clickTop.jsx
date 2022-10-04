@@ -44,7 +44,7 @@ const Wrapper = styled.div`
         transform: rotate(-45deg);
       }
 
-      &.white {
+      &.colorWhite {
         .arrowLine {
           background-color: #fff;
           &:after {
@@ -56,7 +56,7 @@ const Wrapper = styled.div`
 
     & > .scrollText {
       rotate: 90deg;
-      &.white {
+      &.colorWhite {
         color: #fff;
       }
     }
@@ -78,8 +78,7 @@ const ClickTop = () => {
   };
 
   useEffect(() => {
-    if (scrollY > 2700 && white == false) {
-      console.log("상태바꾸자");
+    if (scrollY > 2700 && white === false) {
       setWhite(true);
     } else if (scrollY <= 2700 && white !== false) {
       setWhite(false);
@@ -111,10 +110,10 @@ const ClickTop = () => {
         className={btnStatus ? "clickBox active" : "clickBox"}
         onClick={handleTop}
       >
-        <div className={white == true ? "arrowBox white" : "arrowBox"}>
+        <div className={white === true ? "arrowBox colorWhite" : "arrowBox"}>
           <div className="arrowLine"></div>
         </div>
-        <p className={white == true ? "scrollText white" : "scrollText"}>
+        <p className={white === true ? "scrollText colorWhite" : "scrollText"}>
           CLICK TO TOP
         </p>
       </div>

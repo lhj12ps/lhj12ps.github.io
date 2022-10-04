@@ -49,8 +49,6 @@ const App = () => {
   const focusTarget = useRef([]);
   const [modal, setModal] = useState("");
   const [close, setClose] = useState("");
-  console.log("modal 체크:", modal);
-  console.log("close 체크:", close);
 
   const scrollTo = () => {
     focusTarget.current[category[checkBox]].scrollIntoView({

@@ -1,5 +1,16 @@
 import styled from "styled-components";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
+import { ReactComponent as LogoYoutube } from "../img/logo/logo_youtube.svg";
+
+import ddapGif from "../img/gif/ddapTube.gif";
+import reactGif from "../img/gif/ddapTube.gif";
+import greatGif from "../img/gif/ddapTube.gif";
+import team5Gif from "../img/gif/ddapTube.gif";
+
+import ddapImg from "../img/img_ddapTube.png";
+import reactImg from "../img/img_ddapTube.png";
+import greatImg from "../img/img_ddapTube.png";
+import team5Img from "../img/img_ddapTube.png";
 
 const Wrapper = styled.div`
   position: fixed;
@@ -17,7 +28,7 @@ const Wrapper = styled.div`
     position: absolute;
     width: 60vw;
     height: 70vh;
-    padding: 50px;
+    padding: 40px 50px;
     text-align: center;
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
@@ -30,12 +41,11 @@ const Wrapper = styled.div`
       align-items: center;
       justify-content: space-between;
       height: 50px;
-      margin-bottom: 30px;
+      margin-bottom: 15px;
 
       .modalTitle {
         width: 28vw;
-        font-size: 2.5rem;
-        background-color: olive;
+        font-size: 2.3rem;
       }
 
       .modalCloseBtn {
@@ -44,7 +54,6 @@ const Wrapper = styled.div`
         align-items: center;
         width: 4vw;
         height: 100%;
-        background-color: blue;
         border: none;
         color: rgba(0, 0, 0, 0.7);
         font-size: 20px;
@@ -56,21 +65,77 @@ const Wrapper = styled.div`
     }
 
     .modalBody {
-      background-color: palegreen;
-      width: 28vw;
-      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      height: 83%;
+      width: 100%;
+
+      .modalText {
+        background-color: orange;
+        width: 28vw;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      .modalImg {
+        width: 20vw;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        & > li.gif {
+          height: 22vh;
+        }
+        & > li.img {
+          cursor: pointer;
+          opacity: 30%;
+          height: 22vh;
+
+          background-position: top center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          &:hover {
+            opacity: 1;
+          }
+        }
+
+        .ddapG {
+          background-image: url(${ddapGif});
+        }
+        .reactG {
+          background-image: url(${reactGif});
+        }
+        .greatG {
+          background-image: url(${greatGif});
+        }
+        .team5G {
+          background-image: url(${team5Gif});
+        }
+
+        .ddapI {
+          background-image: url(${ddapImg});
+        }
+        .reactI {
+          background-image: url(${reactImg});
+        }
+        .greatI {
+          background-image: url(${greatImg});
+        }
+        .team5I {
+          background-image: url(${team5Img});
+        }
+      }
     }
   }
 `;
 
 const Modal = ({ modal, close, setClose }) => {
   const category = {
-    ddap: 0,
-    react: 1,
-    great: 2,
-    team5: 3,
+    ddap: "DDAPTUBE",
+    react: "NFT 랜덤민팅/판매사이트",
+    great: "연극/영화 예매사이트",
+    team5: "TEAM5",
   };
-  console.log("modal 체크2222:");
 
   useEffect(() => {
     document.body.style.cssText = `
@@ -86,7 +151,6 @@ const Modal = ({ modal, close, setClose }) => {
   }, []);
 
   const closeModal = (e) => {
-    console.log("취소버튼 클릭했다.");
     e.stopPropagation();
     setClose(false);
   };
@@ -95,7 +159,7 @@ const Modal = ({ modal, close, setClose }) => {
     <Wrapper>
       <div className="Modal">
         <div className="modalHeader">
-          <div className="modalTitle">제목</div>
+          <div className="modalTitle">{category[modal]}</div>
           <div
             className="modalCloseBtn"
             onClick={closeModal}
@@ -104,11 +168,74 @@ const Modal = ({ modal, close, setClose }) => {
             X
           </div>
         </div>
-        <div className="ModalBody">본문</div>
-        <ul>
-          <li className="ModalImg">사진자료1</li>
-          <li className="ModalImg">사진자료1</li>
-        </ul>
+
+        <div className="modalBody">
+          <div className="modalText"></div>
+
+          {modal !== undefined && modal === "ddap" ? (
+            <ul className="modalImg">
+              <li className="gif ddapG"></li>
+              <li className="img ddapI">
+                <LogoYoutube
+                  className="linkIcon"
+                  width="130px"
+                  height="150px"
+                  backgroundColor="#fff"
+                />
+              </li>
+            </ul>
+          ) : (
+            ""
+          )}
+
+          {modal !== undefined && modal === "react" ? (
+            <ul className="modalImg">
+              <li className="gif reactG"></li>
+              <li className="img reactI">
+                <LogoYoutube
+                  className="linkIcon"
+                  width="130px"
+                  height="150px"
+                  backgroundColor="#fff"
+                />
+              </li>
+            </ul>
+          ) : (
+            ""
+          )}
+
+          {modal !== undefined && modal === "great" ? (
+            <ul className="modalImg">
+              <li className="gif greatG"></li>
+              <li className="img greatI">
+                <LogoYoutube
+                  className="linkIcon"
+                  width="130px"
+                  height="150px"
+                  backgroundColor="#fff"
+                />
+              </li>
+            </ul>
+          ) : (
+            ""
+          )}
+
+          {modal !== undefined && modal === "team5" ? (
+            <ul className="modalImg">
+              <li className="gif team5G"></li>
+              <li className="img team5I">
+                <LogoYoutube
+                  className="linkIcon"
+                  width="130px"
+                  height="150px"
+                  backgroundColor="#fff"
+                />
+              </li>
+            </ul>
+          ) : (
+            ""
+          )}
+        </div>
       </div>
     </Wrapper>
   );

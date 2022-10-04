@@ -1,19 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+
 import styled from "styled-components";
-import { ReactComponent as Logo_solidity } from "../img/logo/logo_solidity.svg";
-import { ReactComponent as Logo_expressjs } from "../img/logo/logo_expressjs.svg";
-import { ReactComponent as Logo_ganache } from "../img/logo/logo_ganache.svg";
-import { ReactComponent as Logo_nextjs } from "../img/logo/logo_nextjs.svg";
-import { ReactComponent as Logo_react } from "../img/logo/logo_react.svg";
-import { ReactComponent as Logo_truffle } from "../img/logo/logo_truffle.svg";
-import { ReactComponent as Logo_web3 } from "../img/logo/logo_web3js.svg";
-import { ReactComponent as Logo_js } from "../img/logo/logo_js.svg";
-import { ReactComponent as Logo_slack } from "../img/logo/logo_slack.svg";
-import { ReactComponent as Logo_git } from "../img/logo/logo_git.svg";
-import { ReactComponent as Logo_ps } from "../img/logo/logo_ps.svg";
-import { ReactComponent as Logo_ai } from "../img/logo/logo_ai.svg";
-import { ReactComponent as Logo_id } from "../img/logo/logo_id.svg";
-import { ReactComponent as Logo_figma } from "../img/logo/logo_figma.svg";
+import { ReactComponent as LogoSolidity } from "../img/logo/logo_solidity.svg";
+import { ReactComponent as LogoExpressjs } from "../img/logo/logo_expressjs.svg";
+import { ReactComponent as LogoNextjs } from "../img/logo/logo_nextjs.svg";
+import { ReactComponent as LogoReact } from "../img/logo/logo_react.svg";
+import { ReactComponent as LogoTruffle } from "../img/logo/logo_truffle.svg";
+import { ReactComponent as LogoWeb3 } from "../img/logo/logo_web3js.svg";
+import { ReactComponent as LogoJs } from "../img/logo/logo_js.svg";
+import { ReactComponent as LogoSlack } from "../img/logo/logo_slack.svg";
+import { ReactComponent as LogoGit } from "../img/logo/logo_git.svg";
+import { ReactComponent as LogoPs } from "../img/logo/logo_ps.svg";
+import { ReactComponent as LogoAi } from "../img/logo/logo_ai.svg";
+import { ReactComponent as LogoId } from "../img/logo/logo_id.svg";
+import { ReactComponent as LogoFigma } from "../img/logo/logo_figma.svg";
+import { ReactComponent as LogoChakra }from "../img/logo/logo_chakra.svg"
+import { ReactComponent as LogoMongo }from "../img/logo/logo_mongo.svg"
+import { ReactComponent as LogoMysql }from "../img/logo/logo_mysql.svg"
 
 const Wrapper = styled.div`
   display: flex;
@@ -232,20 +235,157 @@ const Wrapper = styled.div`
   }
 `;
 
+const ModalSkills = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+
+  .Modal {
+    position: absolute;
+    width: 50vw;
+    height: 80vh;
+    padding: 40px 50px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+    z-index: 50;
+    box-sizing: border-box;
+
+    & > .iconsView {
+      display: flex;
+      flex-direction: column;
+      & > ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        & > li {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 80px;
+          width: 80px;
+          border-radius: 30%;
+          box-shadow: -1px 8px 5px 0px rgba(0, 0, 0, 0.2);
+          margin: 0 15px 30px 0;
+        }
+      }
+    }
+  }
+`;
+
 function MySkills() {
   const [click, setClick] = useState("");
+  const [modalClick, setModalClick] = useState(false);
+  const modalRef = useRef();
 
   const handleClick = (e) => {
     const name = e.target.getAttribute("name");
-    if (click == name) {
+    if (click === name) {
       setClick("");
     } else {
       setClick(name);
     }
   };
 
+  const handleModalClick = () => {
+    setModalClick(true);
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", clickModalOutside);
+    return () => {
+      document.removeEventListener("mousedown", clickModalOutside);
+    };
+  });
+
+  const clickModalOutside = (e) => {
+    if (modalClick && !modalRef.current.contains(e.target)) {
+      setModalClick(false);
+    }
+  };
+
   return (
     <>
+      {modalClick ? (
+        <ModalSkills>
+          <div className="Modal" ref={modalRef}>
+            <p style={{fontSize: "3.2rem",
+          fontWeight: "700", margin:"0 0 45px 0",backgroundColor:"#000",color:"#fff",display:"inline-block",padding:"3px 10px 10px 10px"}}>My Skills</p>
+            <div className="iconsView">
+              <ul>
+                <li>
+                  <LogoSolidity width="65px" height="65px" />
+                </li>
+                <li>
+                  <LogoWeb3 width="60px" height="60px" />
+                </li>
+                <li>
+                  <LogoTruffle width="65px" height="65px" />
+                </li>
+              </ul>
+            </div>
+            <div className="iconsView">
+              <ul>
+                <li>
+                  <LogoReact width="60px" height="60px" />
+                </li>
+                <li>
+                  <LogoNextjs width="60px" height="60px" />
+                </li>
+                <li>
+                  <LogoChakra width="60px" height="60px" />
+                </li>
+              </ul>
+            </div>
+            <div className="iconsView">
+              <ul>
+                <li>
+                  <LogoExpressjs width="60px" height="60px" />
+                </li>
+                <li>
+                  <LogoJs width="55px" height="55px" />
+                </li>
+                <li>
+                  <LogoMongo width="55px" height="55px" />
+                </li>
+                <li>
+                  <LogoMysql width="55px" height="55px" />
+                </li>
+              </ul>
+            </div>
+            <div className="iconsView">
+              <ul>
+                <li>
+                  <LogoSlack width="60px" height="60px" />
+                </li>
+                <li>
+                  <LogoGit width="60px" height="60px" />
+                </li>
+                <li>
+                  <LogoFigma width="60px" height="60px" />
+                </li>
+                <li>
+                  <LogoPs width="60px" height="60px" />
+                </li>
+                <li>
+                  <LogoAi width="60px" height="60px" />
+                </li>
+                <li>
+                  <LogoId width="60px" height="60px" />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </ModalSkills>
+      ) : null}
       <Wrapper>
         <div className="bodyBox">
           <div className="numberBox">
@@ -263,7 +403,7 @@ function MySkills() {
               <ul className="subTextUl">
                 <li
                   className={
-                    click == "blockchain"
+                    click === "blockchain"
                       ? "skillBox active"
                       : click !== ""
                       ? "skillBox off"
@@ -273,13 +413,13 @@ function MySkills() {
                   <div className="icons">
                     <ul>
                       <li>
-                        <Logo_solidity width="65px" height="65px" />
+                        <LogoSolidity width="65px" height="65px" />
                       </li>
                       <li>
-                        <Logo_web3 width="60px" height="60px" />
+                        <LogoWeb3 width="60px" height="60px" />
                       </li>
                       <li>
-                        <Logo_truffle width="65px" height="65px" />
+                        <LogoTruffle width="65px" height="65px" />
                       </li>
                     </ul>
                     <p className="simpleText">설명이 보이니</p>
@@ -294,7 +434,7 @@ function MySkills() {
                 </li>
                 <li
                   className={
-                    click == "front"
+                    click === "front"
                       ? "skillBox active"
                       : click !== ""
                       ? "skillBox off"
@@ -304,10 +444,10 @@ function MySkills() {
                   <div className="icons">
                     <ul>
                       <li>
-                        <Logo_react width="60px" height="60px" />
+                        <LogoReact width="60px" height="60px" />
                       </li>
                       <li>
-                        <Logo_nextjs width="60px" height="60px" />
+                        <LogoNextjs width="60px" height="60px" />
                       </li>
                     </ul>
                     <p className="simpleText">설명이 보이니</p>
@@ -322,7 +462,7 @@ function MySkills() {
                 </li>
                 <li
                   className={
-                    click == "back"
+                    click === "back"
                       ? "skillBox active"
                       : click !== ""
                       ? "skillBox off"
@@ -332,10 +472,10 @@ function MySkills() {
                   <div className="icons">
                     <ul>
                       <li>
-                        <Logo_expressjs width="60px" height="60px" />
+                        <LogoExpressjs width="60px" height="60px" />
                       </li>
                       <li>
-                        <Logo_js width="55px" height="55px" />
+                        <LogoJs width="55px" height="55px" />
                       </li>
                     </ul>
                     <p className="simpleText">설명이 보이니</p>
@@ -346,7 +486,7 @@ function MySkills() {
                 </li>
                 <li
                   className={
-                    click == "etc"
+                    click === "etc"
                       ? "skillBox active"
                       : click !== ""
                       ? "skillBox off"
@@ -356,22 +496,22 @@ function MySkills() {
                   <div className="icons">
                     <ul>
                       <li>
-                        <Logo_slack width="60px" height="60px" />
+                        <LogoSlack width="60px" height="60px" />
                       </li>
                       <li>
-                        <Logo_git width="60px" height="60px" />
+                        <LogoGit width="60px" height="60px" />
                       </li>
                       <li>
-                        <Logo_figma width="60px" height="60px" />
+                        <LogoFigma width="60px" height="60px" />
                       </li>
                       <li>
-                        <Logo_ps width="60px" height="60px" />
+                        <LogoPs width="60px" height="60px" />
                       </li>
                       <li>
-                        <Logo_ai width="60px" height="60px" />
+                        <LogoAi width="60px" height="60px" />
                       </li>
                       <li>
-                        <Logo_id width="60px" height="60px" />
+                        <LogoId width="60px" height="60px" />
                       </li>
                     </ul>
                     <p className="simpleText">설명이 보이니</p>
@@ -382,7 +522,7 @@ function MySkills() {
                 </li>
                 <li
                   className={
-                    click == "viewAll"
+                    click === "viewAll"
                       ? "skillBox viewAll"
                       : click !== ""
                       ? "skillBox off"
@@ -393,9 +533,9 @@ function MySkills() {
                   <p
                     className="subTitleText"
                     name="viewAll"
-                    onClick={handleClick}
+                    onClick={handleClick && handleModalClick}
                   >
-                    VIEW ALL SKILLS
+                    VIEW ALL
                   </p>
                 </li>
               </ul>

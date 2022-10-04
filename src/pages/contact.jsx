@@ -108,9 +108,23 @@ function Contact() {
               <ul style={{ display: "flex" }}>
                 <li>ⓒ 2022 HYUNJIN LEE</li>
                 <li style={{ border: "none" }}>/</li>
-                <li style={{ letterSpacing: "2.5px" }}>GITHUB</li>
+                <li
+                  style={{ letterSpacing: "2.5px", cursor: "pointer" }}
+                  onClick={() =>
+                    window.open("https://github.com/lhj12ps", "_blank")
+                  }
+                >
+                  GITHUB
+                </li>
                 <li style={{ border: "none" }}>/</li>
-                <li style={{ letterSpacing: "2.5px" }}>BLOG</li>
+                <li
+                  style={{ letterSpacing: "2.5px", cursor: "pointer" }}
+                  onClick={() =>
+                    window.open("https://hancoco.tistory.com/", "_blank")
+                  }
+                >
+                  BLOG
+                </li>
               </ul>
             </div>
           </div>
