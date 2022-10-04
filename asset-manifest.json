@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/lhj12ps/lhj12ps.github.io/static/js/main.b49b5cfc.js",
+    "main.js": "/lhj12ps/lhj12ps.github.io/static/js/main.a31d0a19.js",
     "static/js/787.1ed0c42c.chunk.js": "/lhj12ps/lhj12ps.github.io/static/js/787.1ed0c42c.chunk.js",
     "static/media/logo_ganache.svg": "/lhj12ps/lhj12ps.github.io/static/media/logo_ganache.6e8559764484ba079a1fb9a995a633f9.svg",
     "static/media/logo_web3js.svg": "/lhj12ps/lhj12ps.github.io/static/media/logo_web3js.920f8a922103167ba37ee536d7350413.svg",
@@ -17,10 +17,10 @@
     "static/media/logo_js.svg": "/lhj12ps/lhj12ps.github.io/static/media/logo_js.acc4642f682cd93a4c20a8a02c0cfa21.svg",
     "static/media/logo_solidity.svg": "/lhj12ps/lhj12ps.github.io/static/media/logo_solidity.5da26cf4a96c33abd2d8b74c51732723.svg",
     "static/media/logo_figma.svg": "/lhj12ps/lhj12ps.github.io/static/media/logo_figma.72ff35026c53ba574aef54c980db0e8d.svg",
-    "main.b49b5cfc.js.map": "/lhj12ps/lhj12ps.github.io/static/js/main.b49b5cfc.js.map",
+    "main.a31d0a19.js.map": "/lhj12ps/lhj12ps.github.io/static/js/main.a31d0a19.js.map",
     "787.1ed0c42c.chunk.js.map": "/lhj12ps/lhj12ps.github.io/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.b49b5cfc.js"
+    "static/js/main.a31d0a19.js"
   ]
 }
