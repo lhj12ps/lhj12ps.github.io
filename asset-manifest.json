@@ -1,26 +1,31 @@
 {
   "files": {
-    "main.js": "/static/js/main.efd108d8.js",
+    "main.js": "/static/js/main.ce865912.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
-    "static/media/logo_ganache.svg": "/static/media/logo_ganache.6e8559764484ba079a1fb9a995a633f9.svg",
+    "static/media/img_ddapTube.png": "/static/media/img_ddapTube.7ef1d5a11b7e1aa2d432.png",
+    "static/media/ddapTube.gif": "/static/media/ddapTube.c13a9783ef0b3dddfdcf.gif",
     "static/media/logo_web3js.svg": "/static/media/logo_web3js.920f8a922103167ba37ee536d7350413.svg",
     "static/media/logo_truffle.svg": "/static/media/logo_truffle.c44069b1585ec212ee7324dfcbab17d4.svg",
     "static/media/logo_nextjs.svg": "/static/media/logo_nextjs.bfb23e822fc36bcdb6ef5e563dd35342.svg",
     "static/media/logo_react.svg": "/static/media/logo_react.e68b35f4774979ae220b1d5d7b345b00.svg",
+    "static/media/logo_mysql.svg": "/static/media/logo_mysql.4c50926040e5a77a27dba211addc08e3.svg",
     "static/media/logo_ps.svg": "/static/media/logo_ps.4a391b7067e054e5d86cf57fa1723159.svg",
     "static/media/logo_slack.svg": "/static/media/logo_slack.044efd1bb71a81557b7b948bc341a6c5.svg",
+    "static/media/logo_mongo.svg": "/static/media/logo_mongo.0781b723446e1f8a1734f7831a9c3313.svg",
     "static/media/logo_id.svg": "/static/media/logo_id.5699acbf76f0a999c8e83bd3734335a2.svg",
     "static/media/logo_ai.svg": "/static/media/logo_ai.5609bf0bdc6ceceaf7a0505e563d7603.svg",
     "static/media/logo_git.svg": "/static/media/logo_git.98b115687dfc759d25ae8a1d8f7d7d32.svg",
     "static/media/logo_expressjs.svg": "/static/media/logo_expressjs.632d3c32e6c8f71f7f7faf4fb71b945b.svg",
     "static/media/logo_js.svg": "/static/media/logo_js.acc4642f682cd93a4c20a8a02c0cfa21.svg",
     "static/media/logo_solidity.svg": "/static/media/logo_solidity.5da26cf4a96c33abd2d8b74c51732723.svg",
+    "static/media/logo_youtube.svg": "/static/media/logo_youtube.d51475162e7c5e40f4daf744572f4aae.svg",
     "index.html": "/index.html",
+    "static/media/logo_chakra.svg": "/static/media/logo_chakra.fddd59d3d4cc6c3eaa78ef3566a87538.svg",
     "static/media/logo_figma.svg": "/static/media/logo_figma.72ff35026c53ba574aef54c980db0e8d.svg",
-    "main.efd108d8.js.map": "/static/js/main.efd108d8.js.map",
+    "main.ce865912.js.map": "/static/js/main.ce865912.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.efd108d8.js"
+    "static/js/main.ce865912.js"
   ]
 }
