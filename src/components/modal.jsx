@@ -31,9 +31,9 @@ const Wrapper = styled.div`
       justify-content: space-between;
       height: 50px;
       margin-bottom: 30px;
-      
+
       .modalTitle {
-        width:28vw;
+        width: 28vw;
         font-size: 2.5rem;
         background-color: olive;
       }
@@ -57,6 +57,8 @@ const Wrapper = styled.div`
 
     .modalBody {
       background-color: palegreen;
+      width: 28vw;
+      height: 100%;
     }
   }
 `;
