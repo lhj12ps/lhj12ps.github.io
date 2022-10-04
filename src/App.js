@@ -5,6 +5,7 @@ import GlobalStyles from "./styles/globalStyles";
 import Nav from "./components/nav";
 import ScrollLine from "./components/scrollLine";
 import ClickTop from "./components/clickTop";
+import Modal from "./components/modal";
 
 import First from "./pages/first";
 import Project from "./pages/project";
@@ -46,6 +47,10 @@ const App = () => {
   };
   const [checkBox, setCheckBox] = useState();
   const focusTarget = useRef([]);
+  const [modal, setModal] = useState("");
+  const [close, setClose] = useState("");
+  console.log("modal 체크:", modal);
+  console.log("close 체크:", close);
 
   const scrollTo = () => {
     focusTarget.current[category[checkBox]].scrollIntoView({
@@ -62,49 +67,59 @@ const App = () => {
   return (
     <>
       <GlobalStyles />
-      <Nav checkBox={checkBox} setCheckBox={setCheckBox} />
-      <ScrollLine />
-      <ClickTop checkBox={checkBox} />
-      <Wrapper>
-        <div className="pageBox" ref={(el) => (focusTarget.current[0] = el)}>
-          <First name="home" checkBox={checkBox} />
-          <div className="backCircle">HOME</div>
-        </div>
+      <div style={{ position: "relative" }}>
+        {close ? (
+          <Modal modal={modal} close={close} setClose={setClose} />
+        ) : null}
+        <Nav checkBox={checkBox} setCheckBox={setCheckBox} />
+        <ScrollLine />
+        <ClickTop checkBox={checkBox} />
+        <Wrapper>
+          <div className="pageBox" ref={(el) => (focusTarget.current[0] = el)}>
+            <First name="home" checkBox={checkBox} />
+            <div className="backCircle">HOME</div>
+          </div>
 
-        <div
-          className="pageBox"
-          ref={(el) => (focusTarget.current[1] = el)}
-          style={{ height: "105vh" }}
-        >
-          <Project checkBox={checkBox} />
-          <div className="backCircle"></div>
-        </div>
+          <div
+            className="pageBox"
+            ref={(el) => (focusTarget.current[1] = el)}
+            style={{ height: "105vh" }}
+          >
+            <Project
+              checkBox={checkBox}
+              modal={modal}
+              setModal={setModal}
+              setClose={setClose}
+            />
+            <div className="backCircle"></div>
+          </div>
 
-        <div
-          className="pageBox"
-          ref={(el) => (focusTarget.current[2] = el)}
-          style={{ height: "100vh" }}
-        >
-          <MySkills checkBox={checkBox} />
-          <div className="backCircle">SKILLS</div>
-        </div>
+          <div
+            className="pageBox"
+            ref={(el) => (focusTarget.current[2] = el)}
+            style={{ height: "100vh" }}
+          >
+            <MySkills checkBox={checkBox} />
+            <div className="backCircle">SKILLS</div>
+          </div>
 
-        <div
-          className="pageBox"
-          style={{ height: "130vh" }}
-          ref={(el) => (focusTarget.current[3] = el)}
-        >
-          <AboutMe checkBox={checkBox} />
-        </div>
+          <div
+            className="pageBox"
+            style={{ height: "130vh" }}
+            ref={(el) => (focusTarget.current[3] = el)}
+          >
+            <AboutMe checkBox={checkBox} />
+          </div>
 
-        <div
-          className="pageBox"
-          style={{ backgroundColor: "#000", height: "75vh" }}
-          ref={(el) => (focusTarget.current[4] = el)}
-        >
-          <Contact checkBox={checkBox} />
-        </div>
-      </Wrapper>
+          <div
+            className="pageBox"
+            style={{ backgroundColor: "#000", height: "75vh" }}
+            ref={(el) => (focusTarget.current[4] = el)}
+          >
+            <Contact checkBox={checkBox} />
+          </div>
+        </Wrapper>
+      </div>
     </>
   );
 };

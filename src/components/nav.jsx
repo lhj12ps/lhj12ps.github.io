@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import React, { useEffect, useState, useRef } from "react";
+import React from "react";
 
 const Wrapper = styled.div`
   position: fixed;
@@ -12,7 +12,7 @@ const Wrapper = styled.div`
   color: #000000;
   font-size: 1.2rem;
   box-sizing: border-box;
-  z-index:10;
+  z-index:5;
   background-color: #fff;
 
   & > ul {

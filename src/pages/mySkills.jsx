@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { ReactComponent as Logo_solidity } from "../img/logo_solidity.svg";
-import { ReactComponent as Logo_expressjs } from "../img/logo_expressjs.svg";
-import { ReactComponent as Logo_ganache } from "../img/logo_ganache.svg";
-import { ReactComponent as Logo_nextjs } from "../img/logo_nextjs.svg";
-import { ReactComponent as Logo_react } from "../img/logo_react.svg";
-import { ReactComponent as Logo_truffle } from "../img/logo_truffle.svg";
-import { ReactComponent as Logo_web3 } from "../img/logo_web3js.svg";
-import { ReactComponent as Logo_js } from "../img/logo_js.svg";
-import { ReactComponent as Logo_slack } from "../img/logo_slack.svg";
-import { ReactComponent as Logo_git } from "../img/logo_git.svg";
-import { ReactComponent as Logo_ps } from "../img/logo_ps.svg";
-import { ReactComponent as Logo_ai } from "../img/logo_ai.svg";
-import { ReactComponent as Logo_id } from "../img/logo_id.svg";
-import { ReactComponent as Logo_figma } from "../img/logo_figma.svg";
+import { ReactComponent as Logo_solidity } from "../img/logo/logo_solidity.svg";
+import { ReactComponent as Logo_expressjs } from "../img/logo/logo_expressjs.svg";
+import { ReactComponent as Logo_ganache } from "../img/logo/logo_ganache.svg";
+import { ReactComponent as Logo_nextjs } from "../img/logo/logo_nextjs.svg";
+import { ReactComponent as Logo_react } from "../img/logo/logo_react.svg";
+import { ReactComponent as Logo_truffle } from "../img/logo/logo_truffle.svg";
+import { ReactComponent as Logo_web3 } from "../img/logo/logo_web3js.svg";
+import { ReactComponent as Logo_js } from "../img/logo/logo_js.svg";
+import { ReactComponent as Logo_slack } from "../img/logo/logo_slack.svg";
+import { ReactComponent as Logo_git } from "../img/logo/logo_git.svg";
+import { ReactComponent as Logo_ps } from "../img/logo/logo_ps.svg";
+import { ReactComponent as Logo_ai } from "../img/logo/logo_ai.svg";
+import { ReactComponent as Logo_id } from "../img/logo/logo_id.svg";
+import { ReactComponent as Logo_figma } from "../img/logo/logo_figma.svg";
 
 const Wrapper = styled.div`
   display: flex;
