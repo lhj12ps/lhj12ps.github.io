@@ -62,6 +62,11 @@ const Wrapper = styled.div`
             position: relative;
             box-shadow: 0px 8px 18px 0px rgba(0, 0, 0, 0.1);
 
+            & > p {
+              text-align: left;
+              margin-bottom: 5px;
+            }
+
             &:hover {
               margin-top: -30px;
               transition: all 600ms ease-in-out;
@@ -79,12 +84,12 @@ const Wrapper = styled.div`
               width: 2px;
               height: 120px;
               background-color: #000;
-              margin: 100px 0 60px 0;
+              margin: 100px 0 50px 0;
             }
             & > .titleText {
               font-size: 1.6rem;
               font-weight: 500;
-              margin-bottom: 5px;
+              margin-bottom: 20px;
             }
           }
         }
@@ -107,11 +112,11 @@ const Wrapper = styled.div`
   }
 `;
 
-const Project = ({ checkBox, modal, setModal,setClose }) => {
+const Project = ({ checkBox, modal, setModal, setClose }) => {
   const handleClick = (e) => {
     const name = e.currentTarget.getAttribute("name");
     setModal(name);
-    setClose(true)
+    setClose(true);
   };
   return (
     <>
@@ -126,7 +131,7 @@ const Project = ({ checkBox, modal, setModal,setClose }) => {
                 <div className="backBox">
                   <span className="bigNum">01</span>
                   <div className="midLine"></div>
-                  <p className="titleText ddapImg">DappTube</p>
+                  <p className="titleText">DappTube</p>
                   <p>8/22 - 9/27</p>
                   <p>기업 협업 프로젝트</p>
                   <p>스마트 컨트랙트를 사용한</p>

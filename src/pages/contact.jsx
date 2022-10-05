@@ -102,6 +102,15 @@ function Contact() {
               >
                 E-MAIL : lhj12ps@gmail.com
               </p>
+              <p
+                style={{
+                  fontSize: "1.7rem",
+                  fontWeight: "300",
+                  letterSpacing: "none",
+                }}
+              >
+                PHONE : 010-2238-0387
+              </p>
             </div>
             <div className="midLineRow">...</div>
             <div className="subText">

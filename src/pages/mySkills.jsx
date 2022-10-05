@@ -14,9 +14,9 @@ import { ReactComponent as LogoPs } from "../img/logo/logo_ps.svg";
 import { ReactComponent as LogoAi } from "../img/logo/logo_ai.svg";
 import { ReactComponent as LogoId } from "../img/logo/logo_id.svg";
 import { ReactComponent as LogoFigma } from "../img/logo/logo_figma.svg";
-import { ReactComponent as LogoChakra }from "../img/logo/logo_chakra.svg"
-import { ReactComponent as LogoMongo }from "../img/logo/logo_mongo.svg"
-import { ReactComponent as LogoMysql }from "../img/logo/logo_mysql.svg"
+import { ReactComponent as LogoChakra } from "../img/logo/logo_chakra.svg";
+import { ReactComponent as LogoMongo } from "../img/logo/logo_mongo.svg";
+import { ReactComponent as LogoMysql } from "../img/logo/logo_mysql.svg";
 
 const Wrapper = styled.div`
   display: flex;
@@ -127,16 +127,8 @@ const Wrapper = styled.div`
             &.active {
               margin: 10px 0;
               & > .icons {
-                .simpleText {
-                  opacity: 1;
-                  margin-top: 23px;
-                  padding-left: 5px;
-                  text-align: left;
-                  font-size: 1.2rem;
-                  transition: all 1200ms ease-in-out;
-                }
-
                 & > ul {
+                  margin-bottom: 23px;
                   & > li {
                     opacity: 1;
                     transition-delay: 250ms;
@@ -146,6 +138,17 @@ const Wrapper = styled.div`
                     justify-content: center;
                     align-items: center;
                   }
+                }
+
+                .simpleText {
+                  opacity: 1;
+                  width: 280px;
+                  padding-left: 5px;
+                  text-align: left;
+                  font-size: 1rem;
+                  transition: all 1200ms ease-in-out;
+                  word-break: keep-all;
+                  background-color: red;
                 }
               }
               .subTitleText {
@@ -317,8 +320,19 @@ function MySkills() {
       {modalClick ? (
         <ModalSkills>
           <div className="Modal" ref={modalRef}>
-            <p style={{fontSize: "3.2rem",
-          fontWeight: "700", margin:"0 0 45px 0",backgroundColor:"#000",color:"#fff",display:"inline-block",padding:"3px 10px 10px 10px"}}>My Skills</p>
+            <p
+              style={{
+                fontSize: "3.2rem",
+                fontWeight: "700",
+                margin: "0 0 45px 0",
+                backgroundColor: "#000",
+                color: "#fff",
+                display: "inline-block",
+                padding: "3px 10px 10px 10px",
+              }}
+            >
+              My Skills
+            </p>
             <div className="iconsView">
               <ul>
                 <li>
@@ -422,7 +436,6 @@ function MySkills() {
                         <LogoTruffle width="65px" height="65px" />
                       </li>
                     </ul>
-                    <p className="simpleText">설명이 보이니</p>
                   </div>
                   <p
                     className="subTitleText"
@@ -450,7 +463,6 @@ function MySkills() {
                         <LogoNextjs width="60px" height="60px" />
                       </li>
                     </ul>
-                    <p className="simpleText">설명이 보이니</p>
                   </div>
                   <p
                     className="subTitleText"
@@ -478,7 +490,6 @@ function MySkills() {
                         <LogoJs width="55px" height="55px" />
                       </li>
                     </ul>
-                    <p className="simpleText">설명이 보이니</p>
                   </div>
                   <p className="subTitleText" name="back" onClick={handleClick}>
                     BACK-END
@@ -514,7 +525,6 @@ function MySkills() {
                         <LogoId width="60px" height="60px" />
                       </li>
                     </ul>
-                    <p className="simpleText">설명이 보이니</p>
                   </div>
                   <p className="subTitleText" name="etc" onClick={handleClick}>
                     ETC

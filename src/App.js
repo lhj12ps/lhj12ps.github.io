@@ -103,7 +103,7 @@ const App = () => {
 
           <div
             className="pageBox"
-            style={{ height: "130vh" }}
+            style={{ height: "130vh",backgroundColor:"#F5F5F5" }}
             ref={(el) => (focusTarget.current[3] = el)}
           >
             <AboutMe checkBox={checkBox} />

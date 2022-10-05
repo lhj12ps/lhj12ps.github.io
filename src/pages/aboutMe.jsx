@@ -1,11 +1,17 @@
 import styled from "styled-components";
 import React, { useState } from "react";
 
+import imgB from "../img/img/img_bible.jpg";
+import imgC from "../img/img/img_coffee.png";
+import imgM from "../img/img/img_wave.jpg";
+import imgR from "../img/img/img_record.jpg";
+import imgP from "../img/img/img_japan.jpg";
+
 const Wrapper = styled.div`
+  height: 100%;
   display: flex;
   align-items: center;
   padding: 0 7vw;
-  height: 80vh;
   display: flex;
   box-sizing: border-box;
 
@@ -45,6 +51,7 @@ const Wrapper = styled.div`
       height: 100%;
       display: flex;
       flex-direction: column;
+      box-sizing: border-box;
 
       & > .titleText {
         height: 100px;
@@ -76,51 +83,69 @@ const Wrapper = styled.div`
           transition: all 400ms ease-in-out;
         }
       }
+
       .subText {
         width: 100%;
-        height: 100%;
         display: flex;
         flex-direction: row;
         align-items: flex-end;
+        box-shadow: 0 8px 18px 0 rgba(34, 36, 38, 0.15);
         box-sizing: border-box;
 
         .imgBox {
-          width: 70%;
+          width: 60%;
           height: 100%;
-          background-color: #353535;
-          opacity: 30%;
           box-sizing: border-box;
+          background-position: top center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          &.b {
+            background-image: url(${imgB});
+          }
+          &.c {
+            background-image: url(${imgC});
+            background-position: top;
+          }
+          &.m {
+            background-image: url(${imgM});
+          }
+          &.r {
+            background-image: url(${imgR});
+          }
+          &.p {
+            background-image: url(${imgP});
+          }
         }
 
         .textBox {
           position: relative;
-          width: 35%;
+          width: 40%;
           height: 100%;
-          padding: 10px 0px 10px 13px;
-          background-color: #010e2f;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          text-align: center;
-          overflow: auto;
+          padding: 85px 60px;
           box-sizing: border-box;
 
           .text {
-            position: absolute;
-            top: 20px;
-            left: 8px;
             width: 100%;
-            text-align: center;
-            font-size: 4.2rem;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-            color: #fff;
-            padding: 5px 10px 0px 0px;
-            margin: 0 0 10px 0;
+            text-align: left;
+            font-size: 2.8rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: #090a05;
             opacity: 1;
             line-height: 95%;
-            transition: all 1s ease-in-out;
             box-sizing: border-box;
+
+            .midLine {
+              width: 1px;
+              height: 100px;
+              background-color: #090a05;
+              margin: 60px 0 50px 3px;
+            }
+
+            .smallText {
+              color: #090a05;
+              font-size: 1rem;
+            }
 
             &.off {
               bottom: 0px;
@@ -193,41 +218,58 @@ function AboutMe() {
               </ul>
             </div>
             <div className="subText">
-              <ul className="imgBox">
-                <li></li>
-              </ul>
-              <ul className="textBox">
-                <li onClick={handleClick} name="b">
-                  <div className={click === "b" ? "text" : "text off"}>
+              <div className="textBox">
+                {click === "b" ? (
+                  <div className="text">
                     <p>BASIC</p>
                     <p>BIBLE</p>
+                    <div className="midLine"></div>
+                    <p className="smallText">#좋아하는_구절 #시편_11장_7절</p>
+                    <p className="smallText">#흔들려도_언제나_돌아오는_근본</p>
                   </div>
-                </li>
-                <li onClick={handleClick} name="c">
-                  <div className={click === "c" ? "text" : "text off"}>
+                ) : null}
+                {click === "c" ? (
+                  <div className="text">
                     <p>CODE</p>
                     <p>COFFEE</p>
+                    <div className="midLine"></div>
+                    <p className="smallText">#2020_시드니_바리스타</p>
+                    <p className="smallText">#지금은_블록체인_개발자</p>
                   </div>
-                </li>
-                <li onClick={handleClick} name="m">
-                  <div className={click === "m" ? "text" : "text off"}>
-                    <p>MOVE</p>
+                ) : null}
+                {click === "m" ? (
+                  <div className="text">
                     <p>MOOD</p>
+                    <p>MUSIC</p>
+                    <div className="midLine"></div>
+                    <p className="smallText">#감동이_파도치는_음악 #좋아요</p>
+                    <p className="smallText">#좋아하면_백번_넘게_들음</p>
                   </div>
-                </li>
-                <li onClick={handleClick} name="r">
-                  <div className={click === "r" ? "text" : "text off"}>
+                ) : null}
+                {click === "r" ? (
+                  <div className="text">
                     <p>READ</p>
                     <p>RECORD</p>
+                    <div className="midLine"></div>
+                    <p className="smallText">#뭐든지_읽는거_좋아함</p>
+                    <p className="smallText">#기록_좋아함 #30년째_일기쓰는중</p>
                   </div>
-                </li>
-                <li onClick={handleClick} name="p">
-                  <div className={click === "p" ? "text" : "text off"}>
+                ) : null}
+                {click === "p" ? (
+                  <div className="text">
                     <p>PLACE</p>
                     <p>PEACE</p>
+                    <div className="midLine"></div>
+                    <p className="smallText">#호주살이_1.5년 #도쿄살이_5년</p>
+                    <p className="smallText">#서울토박이 #고향이_세곳인_기분</p>
                   </div>
-                </li>
-              </ul>
+                ) : null}
+              </div>
+              {click === "b" ? <div className="imgBox b"></div> : null}
+              {click === "c" ? <div className="imgBox c"></div> : null}
+              {click === "m" ? <div className="imgBox m"></div> : null}
+              {click === "r" ? <div className="imgBox r"></div> : null}
+              {click === "p" ? <div className="imgBox p"></div> : null}
             </div>
           </div>
         </div>
