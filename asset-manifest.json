@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/static/js/main.d11d8a98.js",
+    "main.js": "/static/js/main.bfb4ba0b.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
     "static/media/img_wave.jpg": "/static/media/img_wave.c9f27cf544f61f03f077.jpg",
     "static/media/img_ddapTube.png": "/static/media/img_ddapTube.7ef1d5a11b7e1aa2d432.png",
@@ -12,6 +12,7 @@
     "static/media/img_japan.jpg": "/static/media/img_japan.c208d72f67729005dd98.jpg",
     "static/media/reactProject.gif": "/static/media/reactProject.ef98c6ccc3aabb1fecb3.gif",
     "static/media/team5.gif": "/static/media/team5.19744cae73e85aa7fb97.gif",
+    "static/media/img_aboutMe1.jpg": "/static/media/img_aboutMe1.29b783f86a6bb40b3d08.jpg",
     "static/media/img_team5.png": "/static/media/img_team5.190f56403dc0b3f1d81a.png",
     "static/media/logo_web3js.svg": "/static/media/logo_web3js.920f8a922103167ba37ee536d7350413.svg",
     "static/media/logo_truffle.svg": "/static/media/logo_truffle.c44069b1585ec212ee7324dfcbab17d4.svg",
@@ -31,10 +32,10 @@
     "index.html": "/index.html",
     "static/media/logo_chakra.svg": "/static/media/logo_chakra.fddd59d3d4cc6c3eaa78ef3566a87538.svg",
     "static/media/logo_figma.svg": "/static/media/logo_figma.72ff35026c53ba574aef54c980db0e8d.svg",
-    "main.d11d8a98.js.map": "/static/js/main.d11d8a98.js.map",
+    "main.bfb4ba0b.js.map": "/static/js/main.bfb4ba0b.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.d11d8a98.js"
+    "static/js/main.bfb4ba0b.js"
   ]
 }
