@@ -6,6 +6,7 @@ import imgC from "../img/img/img_coffee.png";
 import imgM from "../img/img/img_wave.jpg";
 import imgR from "../img/img/img_record.jpg";
 import imgP from "../img/img/img_japan.jpg";
+import a1 from "../img/img/img_aboutMe1.jpg";
 
 const Wrapper = styled.div`
   height: 100%;
@@ -99,6 +100,9 @@ const Wrapper = styled.div`
           background-position: top center;
           background-repeat: no-repeat;
           background-size: cover;
+          &.a {
+            background-image: url(${a1});
+          }
           &.b {
             background-image: url(${imgB});
           }
@@ -219,6 +223,15 @@ function AboutMe() {
             </div>
             <div className="subText">
               <div className="textBox">
+                {click === "" ? (
+                  <div className="text">
+                    <p>BASIC</p>
+                    <p>BIBLE</p>
+                    <div className="midLine"></div>
+                    <p className="smallText">#좋아하는_구절 #시편_11장_7절</p>
+                    <p className="smallText">#흔들려도_언제나_돌아오는_근본</p>
+                  </div>
+                ) : null}
                 {click === "b" ? (
                   <div className="text">
                     <p>BASIC</p>
@@ -265,6 +278,7 @@ function AboutMe() {
                   </div>
                 ) : null}
               </div>
+              {click === "" ? <div className="imgBox a"></div> : null}
               {click === "b" ? <div className="imgBox b"></div> : null}
               {click === "c" ? <div className="imgBox c"></div> : null}
               {click === "m" ? <div className="imgBox m"></div> : null}

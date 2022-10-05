@@ -170,9 +170,15 @@ const Wrapper = styled.div`
           }
         }
         .reactI {
+          cursor: pointer;
+          opacity: 30%;
           background-image: url(${reactImg});
+          &:hover {
+            opacity: 1;
+          }
         }
         .greatI {
+          cursor: pointer;
           opacity: 30%;
           background-image: url(${greatImg});
           &:hover {
@@ -180,6 +186,7 @@ const Wrapper = styled.div`
           }
         }
         .team5I {
+          cursor: pointer;
           opacity: 30%;
           background-image: url(${team5Img});
           &:hover {
@@ -386,7 +393,15 @@ const Modal = ({ modal, close, setClose }) => {
               </div>
               <ul className="modalImg">
                 <li className="gif reactG"></li>
-                <li className="img reactI"></li>
+                <li
+                  className="img reactI"
+                  onClick={() =>
+                    window.open(
+                      "https://github.com/lhj12ps/React_project",
+                      "_blank"
+                    )
+                  }
+                ></li>
               </ul>
             </>
           ) : (
@@ -455,14 +470,15 @@ const Modal = ({ modal, close, setClose }) => {
               </div>
               <ul className="modalImg">
                 <li className="gif greatG"></li>
-                <li className="img greatI">
-                  <LogoYoutube
-                    className="linkIcon"
-                    width="130px"
-                    height="150px"
-                    backgroundcolor="#fff"
-                  />
-                </li>
+                <li
+                  className="img greatI"
+                  onClick={() =>
+                    window.open(
+                      "https://github.com/lhj12ps/theGreatest6",
+                      "_blank"
+                    )
+                  }
+                ></li>
               </ul>
             </>
           ) : (
@@ -519,14 +535,12 @@ const Modal = ({ modal, close, setClose }) => {
               </div>
               <ul className="modalImg">
                 <li className="gif team5G"></li>
-                <li className="img team5I">
-                  <LogoYoutube
-                    className="linkIcon"
-                    width="130px"
-                    height="150px"
-                    backgroundcolor="#fff"
-                  />
-                </li>
+                <li
+                  className="img team5I"
+                  onClick={() =>
+                    window.open("https://github.com/lhj12ps/teamPJ", "_blank")
+                  }
+                ></li>
               </ul>
             </>
           ) : (
