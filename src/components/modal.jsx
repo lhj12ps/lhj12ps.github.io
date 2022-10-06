@@ -319,7 +319,12 @@ const Modal = ({ modal, close, setClose }) => {
               </div>
               <ul className="modalImg">
                 <li className="gif ddapG"></li>
-                <li className="img ddapI">
+                <li
+                  className="img ddapI"
+                  onClick={() =>
+                    window.open("https://dapptube.vercel.app/", "_blank")
+                  }
+                >
                   <LogoYoutube
                     className="linkIcon"
                     width="130px"
