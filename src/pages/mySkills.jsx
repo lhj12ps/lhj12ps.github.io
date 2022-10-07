@@ -260,7 +260,7 @@ const ModalSkills = styled.div`
       justify-content: space-between;
       flex-direction: column;
       padding: 20px 0;
-      box-sizing:border-box;
+      box-sizing: border-box;
       & > .iconsView {
         display: flex;
         justify-content: space-between;
@@ -315,8 +315,10 @@ function MySkills() {
   });
 
   const clickModalOutside = (e) => {
+    document.body.style.overflow = "hidden";
     if (modalClick && !modalRef.current.contains(e.target)) {
       setModalClick(false);
+      document.body.style.overflow = "unset";
     }
   };
 
