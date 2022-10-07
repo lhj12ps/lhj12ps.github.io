@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/static/js/main.762fbb26.js",
+    "main.js": "/static/js/main.076e51fe.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
     "static/media/img_wave.jpg": "/static/media/img_wave.c9f27cf544f61f03f077.jpg",
     "static/media/img_ddapTube.png": "/static/media/img_ddapTube.7ef1d5a11b7e1aa2d432.png",
@@ -32,10 +32,10 @@
     "index.html": "/index.html",
     "static/media/logo_chakra.svg": "/static/media/logo_chakra.fddd59d3d4cc6c3eaa78ef3566a87538.svg",
     "static/media/logo_figma.svg": "/static/media/logo_figma.72ff35026c53ba574aef54c980db0e8d.svg",
-    "main.762fbb26.js.map": "/static/js/main.762fbb26.js.map",
+    "main.076e51fe.js.map": "/static/js/main.076e51fe.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.762fbb26.js"
+    "static/js/main.076e51fe.js"
   ]
 }
