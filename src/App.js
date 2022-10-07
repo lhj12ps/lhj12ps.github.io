@@ -84,14 +84,14 @@ const App = () => {
           <div
             className="pageBox"
             ref={(el) => (focusTarget.current[1] = el)}
-            style={{ height: "110vh", backgroundColor:"red"}}
+            style={{ height: "110vh"}}
           >
             <Project
               checkBox={checkBox}
               modal={modal}
               setModal={setModal}
               setClose={setClose}
-              style={{ backgroundColor:"blue"}}
+              
             />
             <div className="backCircle"></div>
           </div>
