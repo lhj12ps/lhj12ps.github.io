@@ -22,7 +22,7 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   padding: 0 7vw;
-  height: 76vh;
+  height: 80vh;
   display: flex;
   box-sizing: border-box;
 
@@ -88,26 +88,31 @@ const Wrapper = styled.div`
       .subText {
         display: flex;
         justify-content: flex-end;
-        text-align: right;
         box-sizing: border-box;
+        height: 100%;
 
         & > .subTextUl {
-          height: 80%;
+          height: 100%;
           width: 100%;
           display: flex;
           justify-content: space-between;
           flex-direction: column;
-          box-sizing: border-box;
           transition: all 450ms ease-in-out;
+          overflow: hidden;
+          box-sizing: border-box;
+          padding: 10px 0;
 
           & > .skillBox {
+            position: relative;
             padding: 0 0 0 20px;
-            height: 85px;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            flex-wrap: nowrap;
             width: 100%;
+            height: 100%;
+            min-height: 85px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            flex-direction: row;
+            flex-wrap: nowrap;
             box-sizing: border-box;
 
             &.viewAll {
@@ -125,75 +130,61 @@ const Wrapper = styled.div`
             }
 
             &.active {
-              margin: 10px 0;
+              width: 100%;
+              justify-content: flex-start;
+              flex-direction: row;
+              margin-bottom: 10px;
+
               & > .icons {
+                position: absolute;
+                right: 0;
+                display: block;
+                height: 100%;
                 & > ul {
-                  margin-bottom: 23px;
+                  height: 100%;
+                  display: flex;
+                  align-items: top;
+                  justify-content: flex-end;
+                  padding-right: 10px;
                   & > li {
-                    opacity: 1;
-                    transition-delay: 250ms;
-                    transition: all 450ms ease-in-out;
+                    width: 80px;
+                    height: 80px;
+                    margin-left: 20px;
+                    background-color: #fff;
+                    border-radius: 30%;
                     box-shadow: 0px 8px 18px 0px rgba(0, 0, 0, 0.3);
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    opacity: 1;
+                    transition-delay: 250ms;
+                    transition: all 450ms ease-in-out;
                   }
-                }
-
-                .simpleText {
-                  opacity: 1;
-                  width: 280px;
-                  padding-left: 5px;
-                  text-align: left;
-                  font-size: 1rem;
-                  transition: all 1200ms ease-in-out;
-                  word-break: keep-all;
-                  background-color: red;
                 }
               }
               .subTitleText {
+                display: inline-block;
+                height: 50px;
                 background-color: #000;
                 color: #fff;
-                font-size: 4.5rem;
                 transition: all 450ms ease-in-out;
               }
             }
 
             &.off {
               .subTitleText {
+                transition: all 450ms ease-in-out;
                 color: #000;
-                font-size: 2.3rem;
-                transition: all 600ms ease-in-out;
+              }
+
+              .icons {
+                transition: all 450ms ease-in-out;
+                right: -1000px;
               }
             }
 
             .icons {
-              height: 100%;
-              margin-right: 100px;
-              position: relative;
-              .simpleText {
-                opacity: 0;
-                margin-top: 23px;
-                padding-left: 5px;
-                text-align: left;
-                font-size: 1.2rem;
-                transition: all 50ms ease-in-out;
-              }
-
-              & > ul {
-                display: flex;
-                & > li {
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  opacity: 0;
-                  height: 80px;
-                  width: 80px;
-                  border-radius: 30%;
-                  margin-right: 30px;
-                  transition: all 450ms ease-in-out;
-                }
-              }
+              display: none;
             }
 
             .subTitleText {
@@ -251,6 +242,7 @@ const ModalSkills = styled.div`
 
   .Modal {
     position: absolute;
+    min-width: 700px;
     width: 50vw;
     height: 80vh;
     padding: 40px 50px;
@@ -260,6 +252,7 @@ const ModalSkills = styled.div`
     box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
     z-index: 50;
     box-sizing: border-box;
+    overflow-y: auto;
 
     & > .iconsView {
       display: flex;
@@ -299,6 +292,7 @@ function MySkills() {
 
   const handleModalClick = () => {
     setModalClick(true);
+    setClick("");
   };
 
   useEffect(() => {
@@ -399,6 +393,7 @@ function MySkills() {
           </div>
         </ModalSkills>
       ) : null}
+
       <Wrapper>
         <div className="bodyBox">
           <div className="numberBox">
@@ -423,6 +418,13 @@ function MySkills() {
                       : "skillBox"
                   }
                 >
+                  <p
+                    className="subTitleText"
+                    name="blockchain"
+                    onClick={handleClick}
+                  >
+                    BLOCK-CHAIN
+                  </p>
                   <div className="icons">
                     <ul>
                       <li>
@@ -436,13 +438,6 @@ function MySkills() {
                       </li>
                     </ul>
                   </div>
-                  <p
-                    className="subTitleText"
-                    name="blockchain"
-                    onClick={handleClick}
-                  >
-                    BLOCK-CHAIN
-                  </p>
                 </li>
                 <li
                   className={
@@ -453,6 +448,13 @@ function MySkills() {
                       : "skillBox"
                   }
                 >
+                  <p
+                    className="subTitleText"
+                    name="front"
+                    onClick={handleClick}
+                  >
+                    FRONT-END
+                  </p>
                   <div className="icons">
                     <ul>
                       <li>
@@ -462,14 +464,7 @@ function MySkills() {
                         <LogoNextjs width="60px" height="60px" />
                       </li>
                     </ul>
-                  </div>
-                  <p
-                    className="subTitleText"
-                    name="front"
-                    onClick={handleClick}
-                  >
-                    FRONT-END
-                  </p>
+                  </div>{" "}
                 </li>
                 <li
                   className={
@@ -480,6 +475,9 @@ function MySkills() {
                       : "skillBox"
                   }
                 >
+                  <p className="subTitleText" name="back" onClick={handleClick}>
+                    BACK-END
+                  </p>
                   <div className="icons">
                     <ul>
                       <li>
@@ -490,9 +488,6 @@ function MySkills() {
                       </li>
                     </ul>
                   </div>
-                  <p className="subTitleText" name="back" onClick={handleClick}>
-                    BACK-END
-                  </p>
                 </li>
                 <li
                   className={
@@ -503,6 +498,9 @@ function MySkills() {
                       : "skillBox"
                   }
                 >
+                  <p className="subTitleText" name="etc" onClick={handleClick}>
+                    ETC
+                  </p>
                   <div className="icons">
                     <ul>
                       <li>
@@ -525,9 +523,6 @@ function MySkills() {
                       </li>
                     </ul>
                   </div>
-                  <p className="subTitleText" name="etc" onClick={handleClick}>
-                    ETC
-                  </p>
                 </li>
                 <li
                   className={
@@ -542,7 +537,7 @@ function MySkills() {
                   <p
                     className="subTitleText"
                     name="viewAll"
-                    onClick={handleClick && handleModalClick}
+                    onClick={handleModalClick}
                   >
                     VIEW ALL
                   </p>

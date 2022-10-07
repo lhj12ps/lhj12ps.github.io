@@ -99,7 +99,7 @@ const App = () => {
           <div
             className="pageBox"
             ref={(el) => (focusTarget.current[2] = el)}
-            style={{ height: "100vh" }}
+            style={{ height: "120vh" }}
           >
             <MySkills checkBox={checkBox} />
             <div className="backCircle">SKILLS</div>
