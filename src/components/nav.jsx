@@ -4,16 +4,18 @@ import React from "react";
 const Wrapper = styled.div`
   position: fixed;
   width: 100%;
-  padding: 6.5vh 7vw;
   height: 16vh;
+  min-width: 1000px;
+  padding: 6.5vh 7vw;
+  font-size: 1.2rem;
+  color: #000;
   top: 0px;
   display: flex;
   justify-content: space-between;
-  color: #000000;
-  font-size: 1rem;
+  background-color: #fff;
   box-sizing: border-box;
   z-index: 5;
-  background-color: #fff;
+  overflow-x: auto;
 
   & > ul {
     display: flex;

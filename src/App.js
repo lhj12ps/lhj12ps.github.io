@@ -65,6 +65,11 @@ const App = () => {
     }
   }, [checkBox]);
 
+  useEffect(() => {
+    const titleElement = document.getElementsByTagName("title")[0];
+    titleElement.innerHTML = `이현진 | HyunJin Lee`;
+  }, []);
+
   return (
     <>
       <GlobalStyles />
