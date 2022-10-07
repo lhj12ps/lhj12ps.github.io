@@ -4,8 +4,9 @@ import React, { useEffect, useState } from "react";
 const Wrapper = styled.div`
   position: fixed;
   bottom: 80px;
-  right: 20px;
+  right: 0px;
   z-index: 100;
+  width: 30px;
 
   .clickBox {
     opacity: 0;
@@ -15,7 +16,7 @@ const Wrapper = styled.div`
     opacity: 1;
     cursor: pointer;
     transition: opacity 0.3s ease-in;
-    padding-top: 20px;
+    /* padding-top: 20px; */
     height: 25vh;
     display: flex;
     align-items: center;
@@ -55,6 +56,8 @@ const Wrapper = styled.div`
     }
 
     & > .scrollText {
+      width: 120px;
+      text-align: right;
       rotate: 90deg;
       &.colorWhite {
         color: #fff;

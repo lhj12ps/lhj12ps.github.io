@@ -76,8 +76,10 @@ const Wrapper = styled.div`
       .modalText {
         min-width: 400px;
         width: 28vw;
+        min-height: 80%;
         box-sizing: border-box;
         overflow: auto;
+        margin-right: 10px;
         & > table {
           border-collapse: collapse;
           font-size: 0.9rem;
@@ -138,6 +140,8 @@ const Wrapper = styled.div`
         display: flex;
         justify-content: space-between;
         flex-direction: column;
+        overflow: auto;
+
         & > li.gif {
           min-height: 190px;
           height: 22vh;
@@ -151,6 +155,9 @@ const Wrapper = styled.div`
           background-position: top center;
           background-repeat: no-repeat;
           background-size: cover;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
 
         .ddapG {
@@ -327,7 +334,10 @@ const Modal = ({ modal, close, setClose }) => {
                 <li
                   className="img ddapI"
                   onClick={() =>
-                    window.open("https://dapptube.vercel.app/", "_blank")
+                    window.open(
+                      "https://www.youtube.com/watch?v=LilR9tOKSMs",
+                      "_blank"
+                    )
                   }
                 >
                   <LogoYoutube

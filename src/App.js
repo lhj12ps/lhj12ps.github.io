@@ -66,7 +66,7 @@ const App = () => {
   }, [checkBox]);
 
   return (
-    <PC>
+    <>
       <GlobalStyles />
       <div style={{ position: "relative" }}>
         {close ? (
@@ -107,7 +107,12 @@ const App = () => {
 
           <div
             className="pageBox"
-            style={{ height: "130vh", backgroundColor: "#F5F5F5" }}
+            style={{
+              height: "130vh",
+              backgroundColor: "#F5F5F5",
+              minHeight: "900px",
+              boxSizing: "border-box",
+            }}
             ref={(el) => (focusTarget.current[3] = el)}
           >
             <AboutMe checkBox={checkBox} />
@@ -122,7 +127,7 @@ const App = () => {
           </div>
         </Wrapper>
       </div>
-    </PC>
+    </>
   );
 };
 

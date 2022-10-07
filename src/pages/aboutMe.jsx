@@ -15,6 +15,7 @@ const Wrapper = styled.div`
   padding: 0 7vw;
   display: flex;
   box-sizing: border-box;
+  min-width: 1000px;
 
   & > .bodyBox {
     width: 100%;
@@ -55,10 +56,15 @@ const Wrapper = styled.div`
       box-sizing: border-box;
 
       & > .titleText {
-        height: 100px;
+        min-height: 80px;
+        padding-top: 5px;
+        height: 10vh;
+        min-width: 950px;
         display: flex;
-        margin-bottom: 30px;
-        justify-content: flex-end;
+        margin-bottom: 3vh;
+        justify-content: flex-start;
+        overflow-x: auto;
+        overflow-y: hidden;
 
         .mainText {
           display: inline-block;
@@ -72,6 +78,7 @@ const Wrapper = styled.div`
           line-height: 82%;
           padding: 5px 10px;
           margin-left: 10px;
+          margin-bottom: 10px;
           box-sizing: border-box;
         }
         .off {
@@ -149,6 +156,7 @@ const Wrapper = styled.div`
             .smallText {
               color: #090a05;
               font-size: 1rem;
+              word-break: break-word;
             }
 
             &.off {
@@ -225,11 +233,11 @@ function AboutMe() {
               <div className="textBox">
                 {click === "" ? (
                   <div className="text">
-                    <p>BASIC</p>
-                    <p>BIBLE</p>
+                    <p>HELLO</p>
+                    <p>THIS IS ME</p>
                     <div className="midLine"></div>
-                    <p className="smallText">#좋아하는_구절 #시편_11장_7절</p>
-                    <p className="smallText">#흔들려도_언제나_돌아오는_근본</p>
+                    <p className="smallText">#미니멀리스트 #ISTP</p>
+                    <p className="smallText">#실용주의자</p>
                   </div>
                 ) : null}
                 {click === "b" ? (

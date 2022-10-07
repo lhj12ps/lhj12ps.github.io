@@ -28,6 +28,7 @@ const Wrapper = styled.div`
 
   & > .bodyBox {
     width: 100%;
+    min-width: 940px;
     height: 100%;
     display: flex;
     flex-direction: row;
@@ -131,19 +132,19 @@ const Wrapper = styled.div`
 
             &.active {
               width: 100%;
-              justify-content: flex-start;
+              justify-content: flex-end;
               flex-direction: row;
               margin-bottom: 10px;
 
               & > .icons {
                 position: absolute;
-                right: 0;
+                left: 0;
                 display: block;
                 height: 100%;
                 & > ul {
                   height: 100%;
                   display: flex;
-                  align-items: top;
+                  align-items: center;
                   justify-content: flex-end;
                   padding-right: 10px;
                   & > li {
@@ -164,7 +165,6 @@ const Wrapper = styled.div`
               }
               .subTitleText {
                 display: inline-block;
-                height: 50px;
                 background-color: #000;
                 color: #fff;
                 transition: all 450ms ease-in-out;
@@ -498,9 +498,6 @@ function MySkills() {
                       : "skillBox"
                   }
                 >
-                  <p className="subTitleText" name="etc" onClick={handleClick}>
-                    ETC
-                  </p>
                   <div className="icons">
                     <ul>
                       <li>
@@ -523,6 +520,9 @@ function MySkills() {
                       </li>
                     </ul>
                   </div>
+                  <p className="subTitleText" name="etc" onClick={handleClick}>
+                    ETC
+                  </p>
                 </li>
                 <li
                   className={

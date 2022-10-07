@@ -7,11 +7,13 @@ const Wrapper = styled.div`
   padding: 0 7vw;
   height: 75vh;
   display: flex;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
+  overflow-x: auto;
 
   & > .bodyBox {
     width: 100%;
     height: 100%;
+    min-width: 1000px;
     display: flex;
     flex-direction: row;
     box-sizing: border-box;
@@ -46,7 +48,6 @@ const Wrapper = styled.div`
       width: 100%;
       align-items: center;
       flex-direction: column;
-      /* background-color: orange; */
       box-sizing: border-box;
 
       & > .mainText {
