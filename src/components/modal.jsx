@@ -27,6 +27,7 @@ const Wrapper = styled.div`
   .Modal {
     position: absolute;
     width: 60vw;
+    min-width: 700px;
     height: 75vh;
     padding: 40px 50px 20px 50px;
     text-align: center;
@@ -44,6 +45,7 @@ const Wrapper = styled.div`
       margin-bottom: 15px;
 
       .modalTitle {
+        min-width: 400px;
         width: 28vw;
         font-size: 2.3rem;
       }
@@ -72,6 +74,7 @@ const Wrapper = styled.div`
       width: 100%;
 
       .modalText {
+        min-width: 400px;
         width: 28vw;
         box-sizing: border-box;
         overflow: auto;
@@ -136,12 +139,14 @@ const Wrapper = styled.div`
         justify-content: space-between;
         flex-direction: column;
         & > li.gif {
+          min-height: 190px;
           height: 22vh;
           background-position: top center;
           background-repeat: no-repeat;
           background-size: cover;
         }
         & > li.img {
+          min-height: 190px;
           height: 22vh;
           background-position: top center;
           background-repeat: no-repeat;

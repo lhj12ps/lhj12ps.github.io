@@ -25,6 +25,7 @@ const Wrapper = styled.div`
 
       & > .midLineCol {
         background-color: #000;
+        /* width: 38px; */
         width: 38px;
         height: 200px;
       }

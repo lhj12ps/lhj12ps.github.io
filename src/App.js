@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import GlobalStyles from "./styles/globalStyles";
+import { Mobile, PC } from "./components/mediaQuerySetting";
 
 import Nav from "./components/nav";
 import ScrollLine from "./components/scrollLine";
@@ -15,6 +16,8 @@ import AboutMe from "./pages/aboutMe";
 
 const Wrapper = styled.div`
   width: 100vw;
+  height: 200vh;
+  font-size: 16px;
 
   & > .pageBox {
     position: relative;
@@ -63,7 +66,7 @@ const App = () => {
   }, [checkBox]);
 
   return (
-    <>
+    <PC>
       <GlobalStyles />
       <div style={{ position: "relative" }}>
         {close ? (
@@ -81,13 +84,14 @@ const App = () => {
           <div
             className="pageBox"
             ref={(el) => (focusTarget.current[1] = el)}
-            style={{ height: "105vh" }}
+            style={{ height: "110vh", backgroundColor:"red"}}
           >
             <Project
               checkBox={checkBox}
               modal={modal}
               setModal={setModal}
               setClose={setClose}
+              style={{ backgroundColor:"blue"}}
             />
             <div className="backCircle"></div>
           </div>
@@ -103,7 +107,7 @@ const App = () => {
 
           <div
             className="pageBox"
-            style={{ height: "130vh",backgroundColor:"#F5F5F5" }}
+            style={{ height: "130vh", backgroundColor: "#F5F5F5" }}
             ref={(el) => (focusTarget.current[3] = el)}
           >
             <AboutMe checkBox={checkBox} />
@@ -118,7 +122,7 @@ const App = () => {
           </div>
         </Wrapper>
       </div>
-    </>
+    </PC>
   );
 };
 

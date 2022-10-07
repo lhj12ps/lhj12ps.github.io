@@ -13,7 +13,7 @@ const GlobalStyles = createGlobalStyle`
 
   /* 프로젝트 내 body 태그 안에 공통적으로 적용 */
   body {
-      font-family: Helvetica Neue, sans-serif, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif,'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, stataionName;
+      font-family: Helvetica Neue, sans-serif, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, stataionName;
   }
 
   @font-face {

@@ -10,9 +10,9 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   color: #000000;
-  font-size: 1.2rem;
+  font-size: 1rem;
   box-sizing: border-box;
-  z-index:5;
+  z-index: 5;
   background-color: #fff;
 
   & > ul {

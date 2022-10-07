@@ -161,7 +161,6 @@ const Wrapper = styled.div`
 
             &.off {
               .subTitleText {
-                margin: 0;
                 color: #000;
                 font-size: 2.3rem;
                 transition: all 600ms ease-in-out;

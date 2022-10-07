@@ -9,21 +9,18 @@ const Wrapper = styled.div`
   display: flex;
   box-sizing: border-box;
   font-family: "stationName";
-
   & > .bodyBox {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: row;
     box-sizing: border-box;
-
     .numberBox {
       display: flex;
       justify-content: center;
       align-items: start;
       width: 15vw;
       margin-right: 5vw;
-
       & > .midLineCol {
         position: relative;
         background-color: #000;
@@ -32,12 +29,10 @@ const Wrapper = styled.div`
         rotate: 45deg;
       }
     }
-
     & > .bodyText {
       padding: 10vh 0 0 0;
       width: 66.5vw;
       box-sizing: border-box;
-
       & > ul {
         padding-top: 50px;
         width: 100%;
@@ -45,7 +40,6 @@ const Wrapper = styled.div`
         display: flex;
         justify-content: space-between;
         box-sizing: border-box;
-
         & > li {
           height: 91%;
           width: 21%;
@@ -61,12 +55,10 @@ const Wrapper = styled.div`
             justify-content: start;
             position: relative;
             box-shadow: 0px 8px 18px 0px rgba(0, 0, 0, 0.1);
-
             & > p {
               text-align: left;
               margin-bottom: 5px;
             }
-
             &:hover {
               margin-top: -30px;
               transition: all 600ms ease-in-out;
@@ -74,7 +66,6 @@ const Wrapper = styled.div`
                 color: #004cf2;
               }
             }
-
             & > .bigNum {
               line-height: 0%;
               font-size: 11rem;
@@ -93,14 +84,12 @@ const Wrapper = styled.div`
             }
           }
         }
-
         & > li:nth-child(2) {
           margin-top: 80px;
           &:hover {
             margin-top: -30px;
           }
         }
-
         & > li:nth-child(4) {
           margin-top: 40px;
           &:hover {
