@@ -6,15 +6,19 @@ const Wrapper = styled.div`
   align-items: center;
   padding: 0 7vw;
   height: 75vh;
+  min-height: 720px;
   display: flex;
   box-sizing: border-box;
   font-family: "stationName";
+  overflow-x: auto;
+
   & > .bodyBox {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: row;
     box-sizing: border-box;
+
     .numberBox {
       display: flex;
       justify-content: center;
@@ -30,21 +34,27 @@ const Wrapper = styled.div`
       }
     }
     & > .bodyText {
-      padding: 10vh 0 0 0;
+      padding: 10vh 0 10vh 0;
       width: 66.5vw;
+      height: 100%;
       box-sizing: border-box;
       & > ul {
-        padding-top: 50px;
+        padding: 100px 0 30px 0;
         width: 100%;
         height: 100%;
+        min-height: 520px;
         display: flex;
         justify-content: space-between;
         box-sizing: border-box;
+
         & > li {
-          height: 91%;
+          height: 85%;
           width: 21%;
+          min-width: 200px;
           margin-right: 10px;
           text-align: center;
+          padding: 0 0 20px 0;
+
           .backBox {
             cursor: pointer;
             height: 100%;
@@ -54,10 +64,12 @@ const Wrapper = styled.div`
             flex-direction: column;
             justify-content: start;
             position: relative;
+            background-color: #fff;
             box-shadow: 0px 8px 18px 0px rgba(0, 0, 0, 0.1);
+
             & > p {
               text-align: left;
-              margin-bottom: 5px;
+              margin-bottom: 0.8vh;
             }
             &:hover {
               margin-top: -30px;
@@ -80,7 +92,7 @@ const Wrapper = styled.div`
             & > .titleText {
               font-size: 1.6rem;
               font-weight: 500;
-              margin-bottom: 20px;
+              margin-bottom: 3vh;
             }
           }
         }
@@ -88,12 +100,14 @@ const Wrapper = styled.div`
           margin-top: 80px;
           &:hover {
             margin-top: -30px;
+            transition: all 1.2s ease-in-out;
           }
         }
         & > li:nth-child(4) {
           margin-top: 40px;
           &:hover {
             margin-top: -30px;
+            transition: all 1.3s ease-in-out;
           }
         }
       }
@@ -133,7 +147,8 @@ const Project = ({ checkBox, modal, setModal, setClose }) => {
                   <div className="midLine"></div>
                   <p className="titleText">React_project</p>
                   <p>05/16 - 06/03</p>
-                  <p>랜덤 민팅을 통한 토큰 생성</p>
+                  <p>랜덤 민팅</p>
+                  <p>랜덤 확률 확정</p>
                   <p>토큰 판매 / 구매 사이트</p>
                 </div>
               </li>
