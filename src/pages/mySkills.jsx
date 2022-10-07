@@ -255,10 +255,12 @@ const ModalSkills = styled.div`
     box-sizing: border-box;
 
     & > .iconsBox {
-      height: 100%;
+      height: 70%;
       display: flex;
       justify-content: space-between;
       flex-direction: column;
+      padding: 20px 0;
+      box-sizing:border-box;
       & > .iconsView {
         display: flex;
         justify-content: space-between;
