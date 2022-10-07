@@ -315,10 +315,8 @@ function MySkills() {
   });
 
   const clickModalOutside = (e) => {
-    document.body.style.overflow = "hidden";
     if (modalClick && !modalRef.current.contains(e.target)) {
       setModalClick(false);
-      document.body.style.overflow = "unset";
     }
   };
 
