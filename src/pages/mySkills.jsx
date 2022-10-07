@@ -244,32 +244,42 @@ const ModalSkills = styled.div`
     position: absolute;
     min-width: 700px;
     width: 50vw;
-    height: 80vh;
+    height: 75vh;
     padding: 40px 50px;
     text-align: center;
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
     box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
     z-index: 50;
-    box-sizing: border-box;
     overflow-y: auto;
+    box-sizing: border-box;
 
-    & > .iconsView {
+    & > .iconsBox {
+      height: 100%;
       display: flex;
+      justify-content: space-between;
       flex-direction: column;
-      & > ul {
+      & > .iconsView {
         display: flex;
-        flex-direction: row;
-        justify-content: center;
-        & > li {
+        justify-content: space-between;
+        flex-direction: column;
+        min-width: 650px;
+        & > ul {
+          width: 100%;
+          height: 100%;
           display: flex;
           justify-content: center;
-          align-items: center;
-          height: 80px;
-          width: 80px;
-          border-radius: 30%;
-          box-shadow: -1px 8px 5px 0px rgba(0, 0, 0, 0.2);
-          margin: 0 15px 30px 0;
+          flex-direction: row;
+          & > li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80px;
+            width: 80px;
+            border-radius: 30%;
+            box-shadow: -1px 8px 5px 0px rgba(0, 0, 0, 0.2);
+            margin: 0 15px 30px 0;
+          }
         }
       }
     }
@@ -326,69 +336,71 @@ function MySkills() {
             >
               My Skills
             </p>
-            <div className="iconsView">
-              <ul>
-                <li>
-                  <LogoSolidity width="65px" height="65px" />
-                </li>
-                <li>
-                  <LogoWeb3 width="60px" height="60px" />
-                </li>
-                <li>
-                  <LogoTruffle width="65px" height="65px" />
-                </li>
-              </ul>
-            </div>
-            <div className="iconsView">
-              <ul>
-                <li>
-                  <LogoReact width="60px" height="60px" />
-                </li>
-                <li>
-                  <LogoNextjs width="60px" height="60px" />
-                </li>
-                <li>
-                  <LogoChakra width="60px" height="60px" />
-                </li>
-              </ul>
-            </div>
-            <div className="iconsView">
-              <ul>
-                <li>
-                  <LogoExpressjs width="60px" height="60px" />
-                </li>
-                <li>
-                  <LogoJs width="55px" height="55px" />
-                </li>
-                <li>
-                  <LogoMongo width="55px" height="55px" />
-                </li>
-                <li>
-                  <LogoMysql width="55px" height="55px" />
-                </li>
-              </ul>
-            </div>
-            <div className="iconsView">
-              <ul>
-                <li>
-                  <LogoSlack width="60px" height="60px" />
-                </li>
-                <li>
-                  <LogoGit width="60px" height="60px" />
-                </li>
-                <li>
-                  <LogoFigma width="60px" height="60px" />
-                </li>
-                <li>
-                  <LogoPs width="60px" height="60px" />
-                </li>
-                <li>
-                  <LogoAi width="60px" height="60px" />
-                </li>
-                <li>
-                  <LogoId width="60px" height="60px" />
-                </li>
-              </ul>
+            <div className="iconsBox">
+              <div className="iconsView">
+                <ul>
+                  <li>
+                    <LogoSolidity width="65px" height="65px" />
+                  </li>
+                  <li>
+                    <LogoWeb3 width="60px" height="60px" />
+                  </li>
+                  <li>
+                    <LogoTruffle width="65px" height="65px" />
+                  </li>
+                </ul>
+              </div>
+              <div className="iconsView">
+                <ul>
+                  <li>
+                    <LogoReact width="60px" height="60px" />
+                  </li>
+                  <li>
+                    <LogoNextjs width="60px" height="60px" />
+                  </li>
+                  <li>
+                    <LogoChakra width="60px" height="60px" />
+                  </li>
+                </ul>
+              </div>
+              <div className="iconsView">
+                <ul>
+                  <li>
+                    <LogoExpressjs width="60px" height="60px" />
+                  </li>
+                  <li>
+                    <LogoJs width="55px" height="55px" />
+                  </li>
+                  <li>
+                    <LogoMongo width="55px" height="55px" />
+                  </li>
+                  <li>
+                    <LogoMysql width="55px" height="55px" />
+                  </li>
+                </ul>
+              </div>
+              <div className="iconsView">
+                <ul>
+                  <li>
+                    <LogoSlack width="60px" height="60px" />
+                  </li>
+                  <li>
+                    <LogoGit width="60px" height="60px" />
+                  </li>
+                  <li>
+                    <LogoFigma width="60px" height="60px" />
+                  </li>
+                  <li>
+                    <LogoPs width="60px" height="60px" />
+                  </li>
+                  <li>
+                    <LogoAi width="60px" height="60px" />
+                  </li>
+                  <li>
+                    <LogoId width="60px" height="60px" />
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </ModalSkills>
